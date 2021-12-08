@@ -1,5 +1,6 @@
-import 'package:cozy/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:cozy/theme.dart';
+import 'package:cozy/pages/home_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -47,7 +48,12 @@ class SplashPage extends StatelessWidget {
                         width: 210,
                         height: 50,
                         child: RaisedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          },
                           color: purpleColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(17)),
